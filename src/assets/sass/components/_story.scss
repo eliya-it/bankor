@@ -1,0 +1,85 @@
+.story {
+  -webkit-display: flex;
+  display: flex;
+  gap: 3.2rem;
+  margin: 8rem 0;
+  overflow-x: hidden;
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+  &__photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  &__photo-box {
+    flex: 0 0 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    @include flexCol;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4.2rem;
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: space-between;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    color: var(--color-grey-light-1);
+    margin-left: 3.2rem;
+    margin-bottom: 2.8rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 3.2rem 0 3.2rem 4rem;
+    }
+    &::before,
+    &::after {
+      content: "“";
+      font-family: Georgia, serif;
+      font-size: 8rem;
+      margin: -2rem 0 0 -4rem;
+      position: absolute;
+      color: var(--color-primary-dark);
+    }
+    &::before {
+      margin-top: -4rem;
+    }
+    &::after {
+      content: "”";
+      margin: -1rem -4rem 0 0;
+    }
+  }
+  &__paragraph {
+    color: #b3b6b9;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 3.2rem;
+    }
+    &__photo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-bottom: 1.2rem;
+    }
+    &__name {
+      color: #e2e2e2;
+      margin-bottom: 0.4rem;
+      font-size: 1.4rem;
+    }
+    &__job {
+      color: #a5a6a8;
+      font-size: 1rem;
+    }
+  }
+}

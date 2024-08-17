@@ -1,0 +1,13 @@
+.process {
+  display: flex;
+  flex-direction: column;
+  &__text {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.8rem;
+    @media only screen and (max-width: $bp-medium) {
+      line-height: 2.2;
+      margin: 3.2rem 0;
+    }
+  }
+}

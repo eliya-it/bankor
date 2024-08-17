@@ -1,0 +1,29 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: hidden;
+    @media only screen and (max-width: $bp-large) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: $bp-small) {
+      height: 100vh;
+    }
+  }
+
+  &__icon {
+    height: 40rem;
+    width: 40rem;
+    fill: #fff;
+    text-align: center;
+    height: 100vh;
+  }
+}

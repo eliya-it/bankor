@@ -1,0 +1,13 @@
+.container {
+  margin: 6.4rem;
+  background: var(--bg-dark-1);
+  box-shadow: 0 2rem 6rem 1.5rem rgba(#fff, 0.1);
+  border-radius: 2rem;
+  @media only screen and (max-width: $bp-large) {
+    margin: 2.2rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0;
+    border-radius: 0;
+  }
+}

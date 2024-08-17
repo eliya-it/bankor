@@ -1,0 +1,92 @@
+.heading {
+  &--primary {
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 12rem;
+    }
+    &--main {
+      display: block;
+      font-size: 8rem;
+      font-weight: var(--font-weight-3);
+      line-height: 1.6;
+      letter-spacing: 4rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--color-grey-light-1);
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 5rem;
+        margin-bottom: 0;
+      }
+    }
+    &--sub {
+      display: block;
+      font-size: 2.4rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      color: var(--color-grey-light-2);
+      animation: moveFromLeftFade 0.5s cubic-bezier(0.06, 0.46, 0.61, 0.56);
+
+      margin-bottom: 2rem;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.2rem;
+        line-height: 1.8;
+        text-align: center;
+        margin: 2rem 0;
+      }
+    }
+  }
+  &--secondary {
+    font-size: 4rem;
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    -webkit-clip-path: text;
+    clip-path: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.heading-secondary {
+  display: block;
+  font-size: 4rem;
+  font-weight: 300;
+
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.3rem;
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid var(--color-primary);
+    height: 3rem;
+    width: 12rem;
+    margin: 0 auto;
+  }
+
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.3rem;
+}
+.paragraph {
+  font-size: var(--font-size);
+  color: var(--color-grey-light-1);
+  line-height: 1.65;
+}
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-1);
+  line-height: 1.65;
+  color: var(--color-grey-light-1);
+}

@@ -1,0 +1,106 @@
+.navigation {
+  @include flexCenterSpread;
+  padding: 1.2rem;
+  border-bottom: 1px solid #313131;
+  &__logo {
+    height: 6rem;
+  }
+
+  &__list {
+    @include flexCenterSpread;
+    justify-content: flex-end;
+    list-style: none;
+    @media only screen and (max-width: $bp-medium) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1000;
+      background-color: var(--bg-dark-1);
+      gap: 3.2rem;
+      transform: translateY(-100%);
+      transition: all 450ms ease-in;
+    }
+    &--active {
+      transform: translateY(0%);
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--color-grey-light-1);
+      padding: 1.6rem 3.2rem;
+      transition: all 0.25s ease;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 3rem;
+      }
+    }
+    &:hover {
+      background-color: #fff;
+      border-top-right-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      color: var(--color-grey-dark-3);
+    }
+  }
+  &__btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    z-index: 100000;
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+    }
+  }
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      background-color: var(--color-grey-light-1);
+      width: 3rem;
+      height: 0.2rem;
+      display: inline-block;
+      transition: all 450ms ease-in;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+    }
+    &::before {
+      top: 1rem;
+    }
+    &::after {
+      top: -1rem;
+    }
+    &--active {
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
