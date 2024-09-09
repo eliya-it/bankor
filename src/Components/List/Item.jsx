@@ -1,11 +1,7 @@
 import React from "react";
 
-const Item = (props) => {
-  return (
-    <li className={`${props.className ? props.className : ""}`}>
-      {props.children}
-    </li>
-  );
+const Item = ({ className, children }) => {
+  return <li className={`${className ? className : ""}`}>{children}</li>;
 };
 
 export default Item;

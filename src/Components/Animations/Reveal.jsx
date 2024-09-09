@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import PropTypes from "prop-types";
-const Reveal = (props) => {
-  const { className, hidden, visible, delay, children } = props;
+const Reveal = ({ className, hidden, visible, delay, children }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 

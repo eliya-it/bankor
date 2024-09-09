@@ -1,12 +1,9 @@
 import React from "react";
 
-const List = (props) => {
+const List = ({ className, children }) => {
   return (
-    <ul
-      className={`${props.className ? props.className : ""}`}
-      onClick={(e) => props.onClick(e)}
-    >
-      {props.children}
+    <ul className={`${className ? className : ""}`} onClick={(e) => onClick(e)}>
+      {children}
     </ul>
   );
 };

@@ -42,23 +42,23 @@ const Footer = () => {
           voluptatibus iste neque provident cum sit necessitatibus expedita qui!
         </p>
         <p className="footer__copyright">
-          This project was built
+          This project was developed by
           <a
-            href="https://twitter.com/markov_dev"
+            href="https://x.com/eliya_it"
             target="_blank"
-            className="link link--colored u-margin-small"
+            className="link link--colored u-margin-smallest"
           >
-            Markov
+            Eliya
           </a>
-          for his
+          as part of his
           <a
-            href="https://markovdev.com"
+            href="https://eliyait.com"
             target="_blank"
-            className="link link--colored u-margin-small"
+            className="link link--colored u-margin-smallest"
           >
             Portfolio
           </a>
-          .
+          . <br /> &copy; All rights reserved.
         </p>
       </Reveal>
     </footer>

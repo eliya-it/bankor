@@ -2,16 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6.2rem;
+  gap: 3.2rem;
   @media only screen and (max-width: $bp-medium) {
     flex-direction: column;
   }
   &__box {
+    @include boxShadowLight();
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3.2rem;
-    box-shadow: 0 1rem 5rem rgba(#fff, 0.1);
+
+    gap: 1rem;
     @media only screen and (max-width: $bp-medium) {
       width: 80%;
       margin: 0 auto;
@@ -23,10 +24,8 @@
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
-
     z-index: 20;
     text-align: center;
-    transform: translateY(50%);
   }
 
   &__img {
@@ -37,17 +36,14 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
   }
   &__item {
     flex: 0 0 50%;
-
     display: flex;
     gap: 1.2rem;
-    padding: 2rem 1rem;
-    &:not(:last-child) {
-      margin-bottom: 1.6rem;
-    }
+    padding: 0.8rem;
   }
 
   &__icon {
@@ -59,7 +55,9 @@
   }
   &__btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    align-self: center;
+    justify-self: center;
+    // padding: 1rem 2rem;
     border: none;
     color: var(--color-white);
     background: var(--color-primary-dark);

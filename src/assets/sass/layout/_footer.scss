@@ -55,10 +55,10 @@
     }
   }
   &__copyright {
-    // grid-row: 2 /3;
     margin: 0 auto;
     grid-column: 1 /-1;
     font-size: 1.4rem;
+    text-align: center;
     color: var(--color-grey-light-1);
   }
 }

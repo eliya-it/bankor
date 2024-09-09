@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
 
-const Input = (props) => {
-  const { min = 6, max = 32, validationMsg, type, onChange } = props;
+const Input = ({
+  min = 6,
+  max = 32,
+  validationMsg,
+  type,
+  onChange,
+  id,
+  className,
+  placeholder,
+  value,
+  label,
+  options,
+  children,
+}) => {
   const [errMsg, setErrMsg] = useState("");
   const checkValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
@@ -22,7 +34,7 @@ const Input = (props) => {
   const getInputType = (type = "text", id, options) => {
     if (type === "select") {
       return (
-        <select onChange={props.onChange} className="form__select">
+        <select onChange={onChange} className="form__select">
           {options.map((opt) => (
             <option value={opt.value} key={opt.value}>
               {opt.label}
@@ -33,28 +45,26 @@ const Input = (props) => {
     }
     return (
       <input
-        className={` ${props.className ? props.className : ""} form__input`}
+        className={` ${className ? className : ""} form__input`}
         type={type}
-        placeholder={props.placeholder}
+        placeholder={placeholder}
         id={id}
-        onChange={props.onChange || inputValueHandler}
+        onChange={onChange || inputValueHandler}
         minLength={min}
         maxLength={max}
-        defaultValue={props.value || null}
+        defaultValue={value || null}
         required
       />
     );
   };
-  let inputEl = getInputType("text", props.id);
-  if (props.type === "email") inputEl = getInputType("email", props.id);
-  else if (props.type === "password")
-    inputEl = getInputType("password", props.id);
-  else if (props.type === "select")
-    inputEl = getInputType("select", props.id, props.options);
+  let inputEl = getInputType("text", id);
+  if (type === "email") inputEl = getInputType("email", id);
+  else if (type === "password") inputEl = getInputType("password", id);
+  else if (type === "select") inputEl = getInputType("select", id, options);
   return (
     <div className="form__control">
-      <label htmlFor={props.id} className="form__label">
-        {props.label}
+      <label htmlFor={id} className="form__label">
+        {label}
       </label>
 
       {inputEl}

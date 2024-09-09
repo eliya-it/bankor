@@ -1,6 +1,6 @@
 # Bankor
 
-A finical and accounting company, Bankor UI was built with HTML, CSS, JavaScript and ReactJS, [Check thier work](https://www.bankor.markovdev.com/)
+A finical and accounting company, Bankor UI was built with HTML, CSS, JavaScript and ReactJS, [Check thier work](https://www.bankor.eliyait.com/)
 
 ## This project contains UI only!
 

@@ -1,7 +1,6 @@
 import React from "react";
 
-const HowBox = (props) => {
-  const { icon, step, text } = props;
+const HowBox = ({ icon, step, text }) => {
   return (
     <div className="how__step">
       {icon}

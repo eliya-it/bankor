@@ -1,13 +1,16 @@
 .u-center-text {
   text-align: center !important;
 }
-.-u-flex-center {
+.u-flex-center {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important ;
 }
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important;
+}
+.u-margin-smallest {
+  margin: 0.3rem;
 }
 .u-margin-small {
   margin: 0.5rem;
@@ -81,7 +84,7 @@
   &:link,
   &:visited {
     text-decoration: none;
-    font-size: var(--font-size);
+    font-weight: var(--font-weight-2);
     color: var(--color-primary);
   }
 }
@@ -89,7 +92,9 @@
   padding: 8rem 4.2rem;
   transition: all 0.8s ease;
   overflow: hidden;
-
+  &:not(:last-child) {
+    border-top: var(--border);
+  }
   &--hidden {
     opacity: 0;
     visibility: hidden;

@@ -1,12 +1,9 @@
 import React from "react";
 
-const Section = (props) => {
+const Section = ({ className, children, id }) => {
   return (
-    <section
-      className={`section ${props.className ? props.className : ""}`}
-      id={props.id}
-    >
-      {props.children}
+    <section className={`section ${className ? className : ""}`} id={id}>
+      {children}
     </section>
   );
 };

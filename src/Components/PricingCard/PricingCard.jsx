@@ -1,7 +1,6 @@
 import React from "react";
 
-const PricingCard = (props) => {
-  const { heading, price, description } = props;
+const PricingCard = ({ heading, price, description }) => {
   return (
     <React.Fragment>
       <div className="">

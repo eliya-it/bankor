@@ -1,12 +1,9 @@
 import React from "react";
 
-const Link = (props) => {
+const Link = ({ className, path, children }) => {
   return (
-    <a
-      className={`${props.className ? props.className : ""}`}
-      href={props.path || "#"}
-    >
-      {props.children}
+    <a className={`${className ? className : ""}`} href={path || "#"}>
+      {children}
     </a>
   );
 };

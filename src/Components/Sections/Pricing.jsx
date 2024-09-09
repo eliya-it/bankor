@@ -30,7 +30,7 @@ const Pricing = () => {
             <PricingCard
               heading="Mid-size business"
               description="Management pack & Security & analytics tools"
-              price="200"
+              price="600"
             />
           </Reveal>
 
@@ -42,7 +42,7 @@ const Pricing = () => {
           >
             <PricingCard
               heading="Enterprise"
-              description="Contact us for features"
+              description="Contact us for custom features"
               price="+1000"
             />
           </Reveal>

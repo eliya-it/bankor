@@ -22,7 +22,9 @@ const Story = () => {
           visible={{ x: "0", opacity: 1 }}
           className="story__text"
         >
-          <p className="story__heading">We had the best experience on Bankor</p>
+          <p className="story__heading">
+            "We had the best experience on Bankor"
+          </p>
 
           <p className="paragraph story__paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto

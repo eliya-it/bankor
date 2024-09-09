@@ -8,6 +8,8 @@
   }
 
   &__card {
+    @include flexColSpread();
+    @include boxShadowLight();
     background-color: var(--bg-light);
     border-radius: 1rem;
 
@@ -15,11 +17,9 @@
     font-size: 3rem;
 
     margin: 0 auto;
-    @include flexColSpread;
     text-align: center;
     gap: 1rem;
     padding: 3.2rem;
-    box-shadow: 0 2rem 4rem 0.4rem rgba(#fff, 0.1);
   }
   &__heading {
     padding: 3rem 2.4rem 1rem 2.4rem;

@@ -17,7 +17,7 @@ const Cities = () => {
           hidden={{ y: 200, x: -200, opacity: 0 }}
           visible={{ y: 0, x: 0, opacity: 1 }}
         >
-          <City name="London" photo={london} users="1000" accounters="20" />
+          <City name="London" photo={london} users="1k" accounters="20" />
         </Reveal>
         <Reveal
           hidden={{ y: 200, opacity: 0 }}
@@ -27,7 +27,7 @@ const Cities = () => {
           <City
             name="Moscow"
             photo={moscow}
-            users="2500"
+            users="2.5k"
             accounters="35"
             delay="2"
           />
@@ -37,7 +37,14 @@ const Cities = () => {
           visible={{ y: 0, x: 0, opacity: 1 }}
           delay={0.2}
         >
-          <City name="Berlin" photo={berlin} users="4750" accounters="50" />
+          <City name="Berlin" photo={berlin} users="4.7k" accounters="50" />
+        </Reveal>{" "}
+        <Reveal
+          hidden={{ y: 200, x: 200, opacity: 0 }}
+          visible={{ y: 0, x: 0, opacity: 1 }}
+          delay={0.2}
+        >
+          <City name="New York" photo={newyork} users="+7k" accounters="+60" />
         </Reveal>
       </div>
     </Section>
